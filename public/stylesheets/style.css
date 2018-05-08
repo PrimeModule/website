@@ -1,0 +1,206 @@
+html,
+body {
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+.container {
+  overflow: hidden;
+}
+
+.footer {
+  color: #777;
+  font-size: 11px;
+  bottom: 15px;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+
+.message {
+  animation-duration: 225ms;
+  animation-delay: 1575ms;
+  animation-fill-mode: both;
+  animation-name: zoomIn;
+  font-size: 24px;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.pm-logo {
+  height: 318px;
+  margin: 80px auto 100px;
+  position: relative;
+  width: 318px;
+}
+
+.shape {
+  animation-duration: 225ms;
+  animation-fill-mode: forwards;
+  display: block;
+  visibility: hidden;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: 159px 0;
+  width: 0;
+}
+.shape--1 {
+  animation-name: shape-1;
+  animation-delay: 225ms;
+  left: 0;
+  top: 0;
+  transform-origin: 0 0;
+  z-index: 10;
+}
+.shape--1 .shape__trapeze {
+  transform: rotate(-30deg);
+}
+.shape--2 {
+  animation-name: shape-2;
+  animation-delay: 450ms;
+  left: 0;
+  top: 0;
+  z-index: 9;
+}
+.shape--2 .shape__trapeze {
+  transform: rotate(-30deg);
+}
+.shape--3 {
+  animation-name: shape-3;
+  animation-delay: 675ms;
+  right: 189px;
+  top: 75px;
+  z-index: 8;
+}
+.shape--3 .shape__trapeze {
+  transform: rotate(-30deg);
+}
+.shape--4 {
+  animation-name: shape-4;
+  animation-delay: 900ms;
+  right: 189px;
+  top: 223px;
+  z-index: 7;
+}
+.shape--4 .shape__trapeze {
+  transform: rotate(-30deg);
+}
+.shape--5 {
+  animation-name: shape-5;
+  animation-delay: 1125ms;
+  right: 159px;
+  top: 200px;
+  transform-origin: 0 0;
+  z-index: 6;
+}
+.shape--5 .shape__rectangle {
+  height: 93px;
+  width: 165px;
+  transform: skewY(-30deg);
+}
+.shape--6 {
+  animation-name: shape-6;
+  animation-delay: 1350ms;
+  height: 0;
+  left: -6px;
+  top: 222px;
+  z-index: 5;
+}
+.shape--6 .shape__rectangle {
+  height: inherit;
+  width: 80px;
+  transform: skewY(-30deg);
+}
+.shape__trapeze {
+  border-top: 80px solid;
+  border-left: 46px solid transparent;
+  border-right: 46px solid transparent;
+  display: block;
+  height: 0;
+  width: 100px;
+}
+.shape__trapeze--aquamarine-blue {
+  border-top-color: #76dfe3;
+}
+.shape__trapeze--turquoise {
+  border-top-color: #3dcfd4;
+}
+.shape__rectangle {
+  display: block;
+  height: 80px;
+  width: 160px;
+}
+.shape__rectangle--scooter {
+  background-color: #3bc7cc;
+}
+.shape__rectangle--pelorous {
+  background-color: #35b6ba;
+}
+
+@keyframes shape-1 {
+  0% {
+    transform: rotateY(-90deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateY(0deg);
+  }
+}
+@keyframes shape-2 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateY(180deg);
+  }
+}
+@keyframes shape-3 {
+  0% {
+    transform: rotate(60deg) rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(60deg) rotateY(180deg);
+  }
+}
+@keyframes shape-4 {
+  0% {
+    transform: rotate(120deg) rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotate(120deg) rotateY(180deg);
+  }
+}
+@keyframes shape-5 {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    visibility: visible;
+    transform: rotateY(180deg);
+  }
+}
+@keyframes shape-6 {
+  0% {
+    height: 0;
+  }
+  100% {
+    visibility: visible;
+    height: 140px;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/*# sourceMappingURL=public/stylesheets/style.css.map */
